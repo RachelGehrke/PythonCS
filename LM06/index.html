@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Firewall Logs</title>
+    </head>
+</html>
+<body>
+    <h1>Firewall Logs</h1>
+
+    <ul>
+        {% for log in logs %}
+        <li>{{ log }}</li>
+        {% endfor %}
+    </ul>
+    <form action="/block" method="post">
+        <input type="text" name="ip" placeholder="IP to block">
+        <button type="submit">Block IP</button></button>
+    </form>
+</body>
